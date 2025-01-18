@@ -1905,7 +1905,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .header__logo {
-        width: 11.1875rem
+        width: max-content
     }
 
     .footer__top {
@@ -2099,7 +2099,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 20em) {
     .header__logo {
-        width:9.375rem
+        width: max-content
     }
 
     .footer__top {
@@ -2638,7 +2638,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (min-width: 20em)and (max-width:95.625em) {
     .header__logo {
-        width:clamp(9.375rem ,8.895661157rem + 2.3966942149vw ,11.1875rem)
+        width: max-content
     }
 
     .footer__top {
