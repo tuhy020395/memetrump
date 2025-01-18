@@ -1,7 +1,50 @@
-@import url(https://fonts.googleapis.com/css?family=Stint+Ultra+Condensed:regular);@import url(https://fonts.googleapis.com/css?family=Comic+Neue:300,300italic,regular,italic,700,700italic);@font-face {
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Stint+Ultra+Condensed:regular);
+@import url(https://fonts.googleapis.com/css?family=Comic+Neue:300,300italic,regular,italic,700,700italic);
+
+@font-face {
     font-family: "Helvetica Neue";
     font-display: swap;
-    src: url(../fonts/HelveticaNeueBold.woff2) format("woff2");
+    src: url(../public/fonts/HelveticaNeueBold.woff2) format("woff2");
     font-weight: 700;
     font-style: normal
 }
@@ -9,7 +52,7 @@
 @font-face {
     font-family: Playtoy;
     font-display: swap;
-    src: url(../fonts/Playtoy.woff2) format("woff2");
+    src: url(../public/fonts/Playtoy.woff2) format("woff2");
     font-weight: 400;
     font-style: normal
 }
@@ -17,7 +60,7 @@
 @font-face {
     font-family: Rockwell;
     font-display: swap;
-    src: url(../fonts/RockwellStd-Bold.woff2) format("woff2");
+    src: url(../public/fonts/RockwellStd-Bold.woff2) format("woff2");
     font-weight: 700;
     font-style: normal
 }
@@ -28,15 +71,19 @@
     border: 0
 }
 
-*,*::after,*::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box
 }
 
-*::after,*::before {
+*::after,
+*::before {
     display: inline-block
 }
 
-body,html {
+body,
+html {
     height: 100%;
     min-width: 320px
 }
@@ -53,15 +100,18 @@ body {
     -moz-osx-font-smoothing: grayscale
 }
 
-button,input,textarea {
+button,
+input,
+textarea {
     font-family: "Helvetica Neue";
     font-size: inherit;
     line-height: inherit;
     color: inherit;
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(0, 0, 0, 0)
 }
 
-input,textarea {
+input,
+textarea {
     width: 100%
 }
 
@@ -69,7 +119,9 @@ label {
     display: inline-block
 }
 
-button,option,select {
+button,
+option,
+select {
     cursor: pointer
 }
 
@@ -87,7 +139,12 @@ img {
     vertical-align: top
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: inherit;
     font-size: inherit
 }
@@ -108,7 +165,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @supports (overflow: clip) {
     .wrapper {
-        overflow:clip
+        overflow: clip
     }
 }
 
@@ -129,7 +186,7 @@ h1,h2,h3,h4,h5,h6 {
 [class*="--gc"] {
     display: grid;
     min-width: 0;
-    grid-template-columns: .9375rem 1fr minmax(auto,93.75rem) 1fr .9375rem
+    grid-template-columns: .9375rem 1fr minmax(auto, 93.75rem) 1fr .9375rem
 }
 
 [class*="--gc"]>* {
@@ -147,7 +204,7 @@ h1,h2,h3,h4,h5,h6 {
     column-gap: .625rem;
     border: .1875rem solid #000;
     background-color: #fff;
-    box-shadow: 0 .375rem 0 0 rgba(0,0,0,.49)
+    box-shadow: 0 .375rem 0 0 rgba(0, 0, 0, .49)
 }
 
 .menu__link {
@@ -209,10 +266,10 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     justify-content: center;
     border: .1875rem solid #000;
-    box-shadow: 0 .375rem 0 0 rgba(0,0,0,.49);
-    transition: box-shadow .2s ease 0s,-webkit-transform .2s ease 0s;
-    transition: transform .2s ease 0s,box-shadow .2s ease 0s;
-    transition: transform .2s ease 0s,box-shadow .2s ease 0s,-webkit-transform .2s ease 0s
+    box-shadow: 0 .375rem 0 0 rgba(0, 0, 0, .49);
+    transition: box-shadow .2s ease 0s, -webkit-transform .2s ease 0s;
+    transition: transform .2s ease 0s, box-shadow .2s ease 0s;
+    transition: transform .2s ease 0s, box-shadow .2s ease 0s, -webkit-transform .2s ease 0s
 }
 
 .social-item.small {
@@ -233,7 +290,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .social-item.insta {
-    background: radial-gradient(92.18% 99.11% at 26.56% 107.7%,#fd5 0,#fd5 10%,#ff543e 50%,#c837ab 100%),#fff
+    background: radial-gradient(92.18% 99.11% at 26.56% 107.7%, #fd5 0, #fd5 10%, #ff543e 50%, #c837ab 100%), #fff
 }
 
 .social-item.yellow {
@@ -256,7 +313,7 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: center;
     border: .1875rem solid #000;
     background: #fff;
-    box-shadow: 0 .375rem 0 0 rgba(0,0,0,.49);
+    box-shadow: 0 .375rem 0 0 rgba(0, 0, 0, .49);
     color: #000;
     font-family: "Helvetica Neue";
     font-size: 2rem;
@@ -265,9 +322,9 @@ h1,h2,h3,h4,h5,h6 {
     line-height: 102%;
     letter-spacing: -.03125em;
     text-transform: uppercase;
-    transition: box-shadow .2s ease 0s,-webkit-transform .2s ease 0s;
-    transition: transform .2s ease 0s,box-shadow .2s ease 0s;
-    transition: transform .2s ease 0s,box-shadow .2s ease 0s,-webkit-transform .2s ease 0s
+    transition: box-shadow .2s ease 0s, -webkit-transform .2s ease 0s;
+    transition: transform .2s ease 0s, box-shadow .2s ease 0s;
+    transition: transform .2s ease 0s, box-shadow .2s ease 0s, -webkit-transform .2s ease 0s
 }
 
 .button.small {
@@ -402,7 +459,7 @@ h1,h2,h3,h4,h5,h6 {
     text-transform: uppercase;
     border: .1875rem solid #000;
     background-color: #fff;
-    box-shadow: 0 .1875em 0 0 rgba(0,0,0,.25);
+    box-shadow: 0 .1875em 0 0 rgba(0, 0, 0, .25);
     padding: .125rem .375rem;
     -webkit-transform-origin: left;
     transform-origin: left;
@@ -442,7 +499,7 @@ h1,h2,h3,h4,h5,h6 {
     text-transform: uppercase;
     border: .1875rem solid #000;
     background-color: #fff;
-    box-shadow: 0 .1875em 0 0 rgba(0,0,0,.25);
+    box-shadow: 0 .1875em 0 0 rgba(0, 0, 0, .25);
     padding: .125rem .375rem;
     -webkit-transform-origin: right;
     transform-origin: right;
@@ -452,7 +509,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .footer__top-socail ul {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.125rem
 }
 
@@ -560,7 +617,7 @@ h1,h2,h3,h4,h5,h6 {
 @-webkit-keyframes to-left {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         -webkit-transform: translateX(2.5rem);
         transform: translateX(2.5rem)
     }
@@ -576,7 +633,7 @@ h1,h2,h3,h4,h5,h6 {
 @keyframes to-left {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         -webkit-transform: translateX(2.5rem);
         transform: translateX(2.5rem)
     }
@@ -592,7 +649,7 @@ h1,h2,h3,h4,h5,h6 {
 @-webkit-keyframes to-left-left {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         left: 2.5rem
     }
 
@@ -606,7 +663,7 @@ h1,h2,h3,h4,h5,h6 {
 @keyframes to-left-left {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         left: 2.5rem
     }
 
@@ -620,7 +677,7 @@ h1,h2,h3,h4,h5,h6 {
 @-webkit-keyframes to-right-right {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         left: -2.5rem
     }
 
@@ -634,7 +691,7 @@ h1,h2,h3,h4,h5,h6 {
 @keyframes to-right-right {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         left: -2.5rem
     }
 
@@ -648,7 +705,7 @@ h1,h2,h3,h4,h5,h6 {
 @-webkit-keyframes to-left2 {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         -webkit-transform: translateX(2.5rem) rotate(3deg);
         transform: translateX(2.5rem) rotate(3deg)
     }
@@ -664,7 +721,7 @@ h1,h2,h3,h4,h5,h6 {
 @keyframes to-left2 {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         -webkit-transform: translateX(2.5rem) rotate(3deg);
         transform: translateX(2.5rem) rotate(3deg)
     }
@@ -680,7 +737,7 @@ h1,h2,h3,h4,h5,h6 {
 @-webkit-keyframes to-right {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         -webkit-transform: translateX(-2.5rem);
         transform: translateX(-2.5rem)
     }
@@ -696,7 +753,7 @@ h1,h2,h3,h4,h5,h6 {
 @keyframes to-right {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         -webkit-transform: translateX(-2.5rem);
         transform: translateX(-2.5rem)
     }
@@ -712,7 +769,7 @@ h1,h2,h3,h4,h5,h6 {
 @-webkit-keyframes to-right2 {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         -webkit-transform: translateX(-2.5rem) rotate(-3deg);
         transform: translateX(-2.5rem) rotate(-3deg)
     }
@@ -728,7 +785,7 @@ h1,h2,h3,h4,h5,h6 {
 @keyframes to-right2 {
     0% {
         opacity: 0;
-        visibility: hidden;
+       
         -webkit-transform: translateX(-2.5rem) rotate(-3deg);
         transform: translateX(-2.5rem) rotate(-3deg)
     }
@@ -829,20 +886,6 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-.menu-open-bg {
-    pointer-events: none;
-    position: fixed;
-    z-index: 9;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.5);
-    -webkit-backdrop-filter: blur(.375rem);
-    backdrop-filter: blur(.375rem);
-    opacity: 0;
-    transition: opacity .3s ease 0s
-}
 
 .menu-open .menu-open-bg {
     opacity: 1
@@ -851,7 +894,7 @@ h1,h2,h3,h4,h5,h6 {
 .hero {
     position: relative;
     z-index: 1;
-    background: url(../images/Trump-shot-AP24195851874181.webp) center/cover no-repeat
+    background: url(../public/images/Trump-shot-AP24195851874181.webp) center/cover no-repeat
 }
 
 .hero__container {
@@ -897,9 +940,9 @@ h1,h2,h3,h4,h5,h6 {
 
 .hero__button {
     position: relative;
-    opacity: 0;
-    visibility: hidden;
-    will-change: left,opacity,visibility
+    opacity: 1;
+   
+    will-change: left, opacity, visibility
 }
 
 .hero__social {
@@ -912,12 +955,12 @@ h1,h2,h3,h4,h5,h6 {
 
 .hero__social-item {
     position: relative;
-    will-change: left,opacity,visibility
+    will-change: left, opacity, visibility
 }
 
 .hero__left .hero__social-item {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+   
     left: 2.5rem
 }
 
@@ -932,10 +975,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .hero__right .hero__social-item {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+   
     left: -2.5rem;
-    will-change: left,opacity,visibility
+    will-change: left, opacity, visibility
 }
 
 .hero__image {
@@ -1036,15 +1079,15 @@ h1,h2,h3,h4,h5,h6 {
     text-transform: uppercase;
     border: .1875rem solid #000;
     background-color: #fff;
-    will-change: transform,opacity,visibility;
-    box-shadow: 0 .1875em 0 0 rgba(0,0,0,.25)
+    will-change: transform, opacity, visibility;
+    box-shadow: 0 .1875em 0 0 rgba(0, 0, 0, .25)
 }
 
 .about__title span:nth-child(2) {
     top: -13%;
     left: 1%;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+   
     -webkit-transform: translateX(-2.5rem) rotate(-3deg);
     transform: translateX(-2.5rem) rotate(-3deg)
 }
@@ -1053,8 +1096,8 @@ h1,h2,h3,h4,h5,h6 {
     z-index: 3;
     bottom: 5%;
     right: -3%;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+   
     -webkit-transform: translateX(2.5rem) rotate(3deg);
     transform: translateX(2.5rem) rotate(3deg)
 }
@@ -1089,15 +1132,15 @@ h1,h2,h3,h4,h5,h6 {
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
-    opacity: 0;
-    visibility: hidden;
-    will-change: opacity,visibility
+    opacity: 1;
+   
+    will-change: opacity, visibility
 }
 
 .about__text-decor {
     position: absolute;
     z-index: 1;
-    inset: 0
+    inset: 1
 }
 
 .about__text-decor span {
@@ -1206,7 +1249,7 @@ h1,h2,h3,h4,h5,h6 {
     height: 120%;
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg);
-    background: linear-gradient(rgba(139,189,237,.3),transparent .125rem),linear-gradient(90deg,rgba(139,189,237,.3),transparent .125rem);
+    background: linear-gradient(rgba(139, 189, 237, .3), transparent .125rem), linear-gradient(90deg, rgba(139, 189, 237, .3), transparent .125rem);
     background-size: 8vw 8vw;
     background-position: center center
 }
@@ -1310,9 +1353,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .how__item {
-    opacity: 0;
-    visibility: hidden;
-    will-change: opacity,visibility
+    opacity: 1;
+   
+    will-change: opacity, visibility
 }
 
 .how__item._watcher-view {
@@ -1360,9 +1403,9 @@ h1,h2,h3,h4,h5,h6 {
 
 .roadmap__title {
     width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    will-change: opacity,visibility
+    opacity: 1;
+   
+    will-change: opacity, visibility
 }
 
 .roadmap__title._watcher-view {
@@ -1373,7 +1416,7 @@ h1,h2,h3,h4,h5,h6 {
 .roadmap__items {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 1.5625rem .625rem 2.1875rem .625rem
 }
 
@@ -1441,11 +1484,11 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+   
     -webkit-transform: translateX(-2.5rem);
     transform: translateX(-2.5rem);
-    will-change: transform,opacity,visibility
+    will-change: transform, opacity, visibility
 }
 
 .roadmap__item h4 {
@@ -1481,7 +1524,7 @@ h1,h2,h3,h4,h5,h6 {
     z-index: 3;
     width: 100%;
     aspect-ratio: 1920/1066;
-    background: url(../images/tokenomics.png) center/contain no-repeat
+    background: url(../public/images/tokenomics.png) center/contain no-repeat
 }
 
 .tokenomics__container {
@@ -1501,11 +1544,11 @@ h1,h2,h3,h4,h5,h6 {
     left: 50%;
     width: 73.4%;
     aspect-ratio: 1123/176;
-    -webkit-transform: translate(-50%,-30%);
-    transform: translate(-50%,-30%);
-    opacity: 0;
-    visibility: hidden;
-    will-change: opacity,visibility
+    -webkit-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%);
+    opacity: 1;
+   
+    will-change: opacity, visibility
 }
 
 .tokenomics__title._watcher-view {
@@ -1539,8 +1582,8 @@ h1,h2,h3,h4,h5,h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-48%,-55%);
-    transform: translate(-48%,-55%);
+    -webkit-transform: translate(-48%, -55%);
+    transform: translate(-48%, -55%);
     width: 123.6%;
     aspect-ratio: 1854/1094;
     -o-object-fit: contain;
@@ -1554,8 +1597,8 @@ h1,h2,h3,h4,h5,h6 {
     left: 49%;
     width: 17.8%;
     height: 20%;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1593,12 +1636,12 @@ h1,h2,h3,h4,h5,h6 {
     z-index: 2;
     bottom: 0;
     left: 50%;
-    -webkit-transform: translate(-50%,25%);
-    transform: translate(-50%,25%);
+    -webkit-transform: translate(-50%, 25%);
+    transform: translate(-50%, 25%);
     width: 100%;
     max-width: 64.0625rem;
     aspect-ratio: 1025/170;
-    background: url(../images/caBG.png) center/contain no-repeat;
+    background: url(../public/images/caBG.png) center/contain no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1668,7 +1711,7 @@ h1,h2,h3,h4,h5,h6 {
     position: relative;
     z-index: 1;
     width: 100%;
-    background: url(../images/joinBG.jpg) center/cover no-repeat
+    background: url(../public/images/joinBG.jpg) center/cover no-repeat
 }
 
 .join__container {
@@ -1682,9 +1725,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .join__title {
-    opacity: 0;
-    visibility: hidden;
-    will-change: opacity,visibility
+    opacity: 1;
+   
+    will-change: opacity, visibility
 }
 
 .join__title._watcher-view {
@@ -1720,10 +1763,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .join__button {
-    opacity: 0;
-    visibility: hidden;
+    opacity :1;
+   
     left: -2.5rem;
-    will-change: left,opacity,visibility
+    will-change: left, opacity, visibility
 }
 
 .join__social {
@@ -1736,15 +1779,15 @@ h1,h2,h3,h4,h5,h6 {
 
 .join__social-item {
     position: relative;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+   
     left: -2.5rem;
-    will-change: left,opacity,visibility
+    will-change: left, opacity, visibility
 }
 
 @media (min-width: 47.99875em) {
     .hero__button {
-        left:2.5rem
+        left: 2.5rem
     }
 
     .loaded .hero__button {
@@ -1779,7 +1822,7 @@ h1,h2,h3,h4,h5,h6 {
         left: 2%;
         width: 16%;
         aspect-ratio: 259/317;
-        background: url(../images/howDecor.png) center/contain no-repeat
+        background: url(../public/images/howDecor.png) center/contain no-repeat
     }
 
     .how__column {
@@ -1853,7 +1896,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (min-width: 64.8125em) {
     .tokenomics__ca-item {
-        padding-top:.625rem
+        padding-top: .625rem
     }
 
     .tokenomics__ca-item {
@@ -1901,7 +1944,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (min-width: 95.625em) {
     .menu__link {
-        font-size:1.25rem
+        font-size: 1.25rem
     }
 
     .header__logo {
@@ -2081,7 +2124,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (min-width: 160em) {
     .about {
-        margin-top:-8.125rem
+        margin-top: -8.125rem
     }
 
     .about__top {
@@ -2313,7 +2356,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 61.99875em) {
     .menu__body {
-        position:fixed;
+        position: fixed;
         width: 100%;
         height: auto;
         right: 0;
@@ -2321,7 +2364,7 @@ h1,h2,h3,h4,h5,h6 {
         overflow: auto;
         background-color: #2a2f50;
         border-bottom: .1875rem solid #000;
-        box-shadow: 0 .375rem 0 0 rgba(0,0,0,.49);
+        box-shadow: 0 .375rem 0 0 rgba(0, 0, 0, .49);
         padding: 5.625rem .9375rem 1.875rem .9375rem;
         transition: top .2s ease-in
     }
@@ -2351,10 +2394,12 @@ h1,h2,h3,h4,h5,h6 {
         z-index: 5;
         border: .1875rem solid #000;
         background-color: #fff;
-        box-shadow: 0 .375rem 0 0 rgba(0,0,0,.49)
+        box-shadow: 0 .375rem 0 0 rgba(0, 0, 0, .49)
     }
 
-    .icon-menu span,.icon-menu::after,.icon-menu::before {
+    .icon-menu span,
+    .icon-menu::after,
+    .icon-menu::before {
         content: "";
         transition: all .3s ease 0s;
         right: .4375rem;
@@ -2405,20 +2450,20 @@ h1,h2,h3,h4,h5,h6 {
 
     .tokenomics__title {
         width: 80%;
-        -webkit-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%)
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
     }
 }
 
 @media (max-width: 61.99875em)and (any-hover:none) {
     .icon-menu {
-        cursor:default
+        cursor: default
     }
 }
 
 @media (max-width: 47.99875em) {
     .footer__top::before {
-        top:-5%
+        top: -5%
     }
 
     .footer__top-image {
@@ -2541,7 +2586,7 @@ h1,h2,h3,h4,h5,h6 {
         right: -5%;
         width: 45%;
         aspect-ratio: 845/1205;
-        background: url(../images/how.png) center/contain no-repeat
+        background: url(../public/images/how.png) center/contain no-repeat
     }
 
     .how__title-mobile {
@@ -2567,7 +2612,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .roadmap__items {
-        grid-template-columns: repeat(1,1fr)
+        grid-template-columns: repeat(1, 1fr)
     }
 
     .roadmap__item._watcher-view {
@@ -2577,13 +2622,13 @@ h1,h2,h3,h4,h5,h6 {
 
     .tokenomics {
         aspect-ratio: 768/2415;
-        background: url(../images/tokenomics-mob.png) center/contain no-repeat
+        background: url(../public/images/tokenomics-mob.png) center/contain no-repeat
     }
 
     .tokenomics__title {
         width: 90%;
-        -webkit-transform: translate(-50%,-15%);
-        transform: translate(-50%,-15%)
+        -webkit-transform: translate(-50%, -15%);
+        transform: translate(-50%, -15%)
     }
 
     .tokenomics__image img {
@@ -2599,8 +2644,8 @@ h1,h2,h3,h4,h5,h6 {
 
     .tokenomics__ca {
         width: 102%;
-        -webkit-transform: translate(-50%,-10%);
-        transform: translate(-50%,-10%)
+        -webkit-transform: translate(-50%, -10%);
+        transform: translate(-50%, -10%)
     }
 
     .join__title {
@@ -2616,7 +2661,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 47.99875em)and (max-width:20em) {
     .hero__image {
-        margin-top:-13.75rem
+        margin-top: -13.75rem
     }
 
     .join {
@@ -2626,13 +2671,13 @@ h1,h2,h3,h4,h5,h6 {
 
 @media (max-width: 29.99875em) {
     .footer__top-body {
-        row-gap:2.5rem
+        row-gap: 2.5rem
     }
 }
 
 @media (min-width: 61.99875em)and (max-width:95.625em) {
     .menu__link {
-        font-size:clamp(1.0625rem ,.7167949147rem + .5576000892vw ,1.25rem)
+        font-size: clamp(1.0625rem, .7167949147rem + .5576000892vw, 1.25rem)
     }
 }
 
@@ -2642,423 +2687,423 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .footer__top {
-        padding-top: clamp(1.25rem ,1.0847107438rem + .826446281vw ,1.875rem)
+        padding-top: clamp(1.25rem, 1.0847107438rem + .826446281vw, 1.875rem)
     }
 
     .footer__top {
-        padding-bottom: clamp(1.25rem ,1.0847107438rem + .826446281vw ,1.875rem)
+        padding-bottom: clamp(1.25rem, 1.0847107438rem + .826446281vw, 1.875rem)
     }
 
     .page__how-road {
-        padding-top: clamp(6.25rem ,2.944214876rem + 16.5289256198vw ,18.75rem)
+        padding-top: clamp(6.25rem, 2.944214876rem + 16.5289256198vw, 18.75rem)
     }
 
     .page__how-road {
-        padding-bottom: clamp(5rem ,4.0082644628rem + 4.958677686vw ,8.75rem)
+        padding-bottom: clamp(5rem, 4.0082644628rem + 4.958677686vw, 8.75rem)
     }
 
     .hero__container {
-        padding-top: clamp(7.5rem ,6.8388429752rem + 3.305785124vw ,10rem)
+        padding-top: clamp(7.5rem, 6.8388429752rem + 3.305785124vw, 10rem)
     }
 
     .hero__title {
-        margin-bottom: clamp(1.875rem ,1.7097107438rem + .826446281vw ,2.5rem)
+        margin-bottom: clamp(1.875rem, 1.7097107438rem + .826446281vw, 2.5rem)
     }
 
     .about__text-decor span {
-        width: clamp(.5rem ,.4669421488rem + .1652892562vw ,.625rem)
+        width: clamp(.5rem, .4669421488rem + .1652892562vw, .625rem)
     }
 
     .roadmap__items-decor span {
-        width: clamp(.5rem ,.4669421488rem + .1652892562vw ,.625rem)
+        width: clamp(.5rem, .4669421488rem + .1652892562vw, .625rem)
     }
 
     .tokenomics__container {
-        padding-bottom: clamp(2.5rem ,1.5082644628rem + 4.958677686vw ,6.25rem)
+        padding-bottom: clamp(2.5rem, 1.5082644628rem + 4.958677686vw, 6.25rem)
     }
 
     .join {
-        margin-top: clamp(-3.75rem ,-1.3791322314rem + -2.479338843vw ,-1.875rem)
+        margin-top: clamp(-3.75rem, -1.3791322314rem + -2.479338843vw, -1.875rem)
     }
 }
 
 @media (min-width: 47.99875em)and (max-width:95.625em) {
     .footer__top-body {
-        -webkit-column-gap:clamp(3.75rem ,-1.2891065851rem + 10.4984121152vw ,8.75rem);
-        -moz-column-gap: clamp(3.75rem ,-1.2891065851rem + 10.4984121152vw ,8.75rem);
-        column-gap: clamp(3.75rem ,-1.2891065851rem + 10.4984121152vw ,8.75rem)
+        -webkit-column-gap: clamp(3.75rem, -1.2891065851rem + 10.4984121152vw, 8.75rem);
+        -moz-column-gap: clamp(3.75rem, -1.2891065851rem + 10.4984121152vw, 8.75rem);
+        column-gap: clamp(3.75rem, -1.2891065851rem + 10.4984121152vw, 8.75rem)
     }
 
     .footer__top-menu h3 {
-        margin-bottom: clamp(.5rem ,.3740223354rem + .2624603029vw ,.625rem)
+        margin-bottom: clamp(.5rem, .3740223354rem + .2624603029vw, .625rem)
     }
 
     .footer__top-menu h3 {
-        font-size: clamp(1.5rem ,.9960893415rem + 1.0498412115vw ,2rem)
+        font-size: clamp(1.5rem, .9960893415rem + 1.0498412115vw, 2rem)
     }
 
     .footer__top-menu ul li a {
-        font-size: clamp(2.25rem ,.4863126952rem + 3.6744442403vw ,4rem)
+        font-size: clamp(2.25rem, .4863126952rem + 3.6744442403vw, 4rem)
     }
 
     .footer__top-socail h3 {
-        margin-bottom: clamp(.5rem ,.3740223354rem + .2624603029vw ,.625rem)
+        margin-bottom: clamp(.5rem, .3740223354rem + .2624603029vw, .625rem)
     }
 
     .footer__top-socail h3 {
-        font-size: clamp(1.5rem ,.9960893415rem + 1.0498412115vw ,2rem)
+        font-size: clamp(1.5rem, .9960893415rem + 1.0498412115vw, 2rem)
     }
 
     .about {
-        padding-top: clamp(2.5rem ,-.0195532926rem + 5.2492060576vw ,5rem)
+        padding-top: clamp(2.5rem, -.0195532926rem + 5.2492060576vw, 5rem)
     }
 
     .about__container {
-        -webkit-column-gap: clamp(1.25rem ,-1.2695532926rem + 5.2492060576vw ,3.75rem);
-        -moz-column-gap: clamp(1.25rem ,-1.2695532926rem + 5.2492060576vw ,3.75rem);
-        column-gap: clamp(1.25rem ,-1.2695532926rem + 5.2492060576vw ,3.75rem)
+        -webkit-column-gap: clamp(1.25rem, -1.2695532926rem + 5.2492060576vw, 3.75rem);
+        -moz-column-gap: clamp(1.25rem, -1.2695532926rem + 5.2492060576vw, 3.75rem);
+        column-gap: clamp(1.25rem, -1.2695532926rem + 5.2492060576vw, 3.75rem)
     }
 
     .about__image {
-        padding-top: clamp(.0000000625rem ,5.5215085588rem + -5.7741265321vw ,2.75rem)
+        padding-top: clamp(.0000000625rem, 5.5215085588rem + -5.7741265321vw, 2.75rem)
     }
 
     .about__title {
-        margin-bottom: clamp(.75rem ,-.7617319755rem + 3.1495236346vw ,2.25rem)
+        margin-bottom: clamp(.75rem, -.7617319755rem + 3.1495236346vw, 2.25rem)
     }
 
     .about__title span {
-        font-size: clamp(1rem ,-.007821317rem + 2.099682423vw ,2rem)
+        font-size: clamp(1rem, -.007821317rem + 2.099682423vw, 2rem)
     }
 
     .about__text p {
-        font-size: clamp(.875rem ,.6230446707rem + .5249206058vw ,1.125rem)
+        font-size: clamp(.875rem, .6230446707rem + .5249206058vw, 1.125rem)
     }
 
     .how__column {
-        padding-left: clamp(1.25rem ,-.0097766463rem + 2.6246030288vw ,2.5rem)
+        padding-left: clamp(1.25rem, -.0097766463rem + 2.6246030288vw, 2.5rem)
     }
 
     .how__column {
-        padding-right: clamp(1.25rem ,-.0097766463rem + 2.6246030288vw ,2.5rem)
+        padding-right: clamp(1.25rem, -.0097766463rem + 2.6246030288vw, 2.5rem)
     }
 
     .how__column:nth-child(3) {
-        padding-top: clamp(1.25rem ,-.6396649694rem + 3.9369045432vw ,3.125rem)
+        padding-top: clamp(1.25rem, -.6396649694rem + 3.9369045432vw, 3.125rem)
     }
 
     .how__column:nth-child(3) {
-        padding-bottom: clamp(1.25rem ,-.0097766463rem + 2.6246030288vw ,2.5rem)
+        padding-bottom: clamp(1.25rem, -.0097766463rem + 2.6246030288vw, 2.5rem)
     }
 
     .how__title {
-        font-size: clamp(12.5rem ,-.0977664628rem + 26.2460302879vw ,25rem)
+        font-size: clamp(12.5rem, -.0977664628rem + 26.2460302879vw, 25rem)
     }
 
     .how__item h4 {
-        font-size: clamp(1.875rem ,1.1821228445rem + 1.4435316658vw ,2.5625rem)
+        font-size: clamp(1.875rem, 1.1821228445rem + 1.4435316658vw, 2.5625rem)
     }
 
     .how__item p {
-        font-size: clamp(.875rem ,.4970670061rem + .7873809086vw ,1.25rem)
+        font-size: clamp(.875rem, .4970670061rem + .7873809086vw, 1.25rem)
     }
 
     .roadmap__content {
-        padding-top: clamp(.75rem ,-.0058659878rem + 1.5747618173vw ,1.5rem)
+        padding-top: clamp(.75rem, -.0058659878rem + 1.5747618173vw, 1.5rem)
     }
 
     .roadmap__title {
-        margin-bottom: clamp(1.875rem ,-.6445532926rem + 5.2492060576vw ,4.375rem)
+        margin-bottom: clamp(1.875rem, -.6445532926rem + 5.2492060576vw, 4.375rem)
     }
 
     .roadmap__items {
-        -webkit-column-gap: clamp(1rem ,.7480446707rem + .5249206058vw ,1.25rem);
-        -moz-column-gap: clamp(1rem ,.7480446707rem + .5249206058vw ,1.25rem);
-        column-gap: clamp(1rem ,.7480446707rem + .5249206058vw ,1.25rem)
+        -webkit-column-gap: clamp(1rem, .7480446707rem + .5249206058vw, 1.25rem);
+        -moz-column-gap: clamp(1rem, .7480446707rem + .5249206058vw, 1.25rem);
+        column-gap: clamp(1rem, .7480446707rem + .5249206058vw, 1.25rem)
     }
 
     .roadmap__items {
-        row-gap: clamp(1.5rem ,.9960893415rem + 1.0498412115vw ,2rem)
+        row-gap: clamp(1.5rem, .9960893415rem + 1.0498412115vw, 2rem)
     }
 
     .roadmap__items {
-        margin-right: clamp(1.25rem ,-2.5293299388rem + 7.8738090864vw ,5rem)
+        margin-right: clamp(1.25rem, -2.5293299388rem + 7.8738090864vw, 5rem)
     }
 
     .roadmap__item h4 {
-        font-size: clamp(.9125rem ,.068449647rem + 1.7584840293vw ,1.75rem)
+        font-size: clamp(.9125rem, .068449647rem + 1.7584840293vw, 1.75rem)
     }
 
     .roadmap__item p {
-        font-size: clamp(.8125rem ,.4975558384rem + .6561507572vw ,1.125rem)
+        font-size: clamp(.8125rem, .4975558384rem + .6561507572vw, 1.125rem)
     }
 
     .tokenomics__cap {
-        row-gap: clamp(.25rem ,-.1279329939rem + .7873809086vw ,.625rem)
+        row-gap: clamp(.25rem, -.1279329939rem + .7873809086vw, .625rem)
     }
 
     .tokenomics__cap>span:nth-child(1) {
-        font-size: clamp(1.75rem ,.2382680245rem + 3.1495236346vw ,3.25rem)
+        font-size: clamp(1.75rem, .2382680245rem + 3.1495236346vw, 3.25rem)
     }
 
     .tokenomics__cap>span:nth-child(2) {
-        font-size: clamp(2.625rem ,.2314243721rem + 4.9867457547vw ,5rem)
+        font-size: clamp(2.625rem, .2314243721rem + 4.9867457547vw, 5rem)
     }
 
     .join__container {
-        padding-bottom: clamp(5.625rem ,1.8456700612rem + 7.8738090864vw ,9.375rem)
+        padding-bottom: clamp(5.625rem, 1.8456700612rem + 7.8738090864vw, 9.375rem)
     }
 
     .join__actions {
-        margin-left: clamp(1.875rem ,-.0146649694rem + 3.9369045432vw ,3.75rem)
+        margin-left: clamp(1.875rem, -.0146649694rem + 3.9369045432vw, 3.75rem)
     }
 }
 
 @media (min-width: 20em)and (max-width:47.99875em) {
     .footer__top-menu h3 {
-        margin-bottom:clamp(.75rem ,.3928411983rem + 1.7857940087vw ,1.25rem)
+        margin-bottom: clamp(.75rem, .3928411983rem + 1.7857940087vw, 1.25rem)
     }
 
     .footer__top-menu h3 {
-        font-size: clamp(1.75rem ,1.3928411983rem + 1.7857940087vw ,2.25rem)
+        font-size: clamp(1.75rem, 1.3928411983rem + 1.7857940087vw, 2.25rem)
     }
 
     .footer__top-menu ul li a {
-        font-size: clamp(2rem ,.5713647931rem + 7.1431760346vw ,4rem)
+        font-size: clamp(2rem, .5713647931rem + 7.1431760346vw, 4rem)
     }
 
     .footer__top-socail h3 {
-        margin-bottom: clamp(.75rem ,.3928411983rem + 1.7857940087vw ,1.25rem)
+        margin-bottom: clamp(.75rem, .3928411983rem + 1.7857940087vw, 1.25rem)
     }
 
     .footer__top-socail h3 {
-        font-size: clamp(1.75rem ,1.3928411983rem + 1.7857940087vw ,2.25rem)
+        font-size: clamp(1.75rem, 1.3928411983rem + 1.7857940087vw, 2.25rem)
     }
 
     .about {
-        padding-top: clamp(3.75rem ,1.9642059913rem + 8.9289700433vw ,6.25rem)
+        padding-top: clamp(3.75rem, 1.9642059913rem + 8.9289700433vw, 6.25rem)
     }
 
     .about__title {
-        margin-bottom: clamp(1rem ,.1071029957rem + 4.4644850217vw ,2.25rem)
+        margin-bottom: clamp(1rem, .1071029957rem + 4.4644850217vw, 2.25rem)
     }
 
     .about__title span {
-        font-size: clamp(.875rem ,.0713926961rem + 4.0180365195vw ,2rem)
+        font-size: clamp(.875rem, .0713926961rem + 4.0180365195vw, 2rem)
     }
 
     .about__text p {
-        font-size: clamp(1rem ,.9107102996rem + .4464485022vw ,1.125rem)
+        font-size: clamp(1rem, .9107102996rem + .4464485022vw, 1.125rem)
     }
 
     .about__bottom {
-        bottom: clamp(.9375rem ,2.5446727532rem + -3.3483637662vw ,1.875rem)
+        bottom: clamp(.9375rem, 2.5446727532rem + -3.3483637662vw, 1.875rem)
     }
 
     .how__body {
-        padding: clamp(1.25rem ,.7142617974rem + 2.678691013vw ,2rem)
+        padding: clamp(1.25rem, .7142617974rem + 2.678691013vw, 2rem)
     }
 
     .how__title-mobile {
-        font-size: clamp(5.75rem ,1.6426737801rem + 20.5366310996vw ,11.5rem)
+        font-size: clamp(5.75rem, 1.6426737801rem + 20.5366310996vw, 11.5rem)
     }
 
     .how__title-mobile {
-        margin-bottom: clamp(1.25rem ,.8035514978rem + 2.2322425108vw ,1.875rem)
+        margin-bottom: clamp(1.25rem, .8035514978rem + 2.2322425108vw, 1.875rem)
     }
 
     .how__item h4 {
-        font-size: clamp(1.875rem ,1.3839066476rem + 2.4554667619vw ,2.5625rem)
+        font-size: clamp(1.875rem, 1.3839066476rem + 2.4554667619vw, 2.5625rem)
     }
 
     .how__item p {
-        font-size: clamp(1.125rem ,1.0357102996rem + .4464485022vw ,1.25rem)
+        font-size: clamp(1.125rem, 1.0357102996rem + .4464485022vw, 1.25rem)
     }
 
     .roadmap__title {
-        margin-bottom: clamp(1.875rem ,1.4285514978rem + 2.2322425108vw ,2.5rem)
+        margin-bottom: clamp(1.875rem, 1.4285514978rem + 2.2322425108vw, 2.5rem)
     }
 
     .roadmap__items {
-        -webkit-column-gap: clamp(1rem ,.8214205991rem + .8928970043vw ,1.25rem);
-        -moz-column-gap: clamp(1rem ,.8214205991rem + .8928970043vw ,1.25rem);
-        column-gap: clamp(1rem ,.8214205991rem + .8928970043vw ,1.25rem)
+        -webkit-column-gap: clamp(1rem, .8214205991rem + .8928970043vw, 1.25rem);
+        -moz-column-gap: clamp(1rem, .8214205991rem + .8928970043vw, 1.25rem);
+        column-gap: clamp(1rem, .8214205991rem + .8928970043vw, 1.25rem)
     }
 
     .roadmap__items {
-        row-gap: clamp(1.5rem ,1.1428411983rem + 1.7857940087vw ,2rem)
+        row-gap: clamp(1.5rem, 1.1428411983rem + 1.7857940087vw, 2rem)
     }
 
     .roadmap__item h4 {
-        font-size: clamp(1.625rem ,1.0892617974rem + 2.678691013vw ,2.375rem)
+        font-size: clamp(1.625rem, 1.0892617974rem + 2.678691013vw, 2.375rem)
     }
 
     .roadmap__item p {
-        font-size: clamp(1.125rem ,1.0357102996rem + .4464485022vw ,1.25rem)
+        font-size: clamp(1.125rem, 1.0357102996rem + .4464485022vw, 1.25rem)
     }
 
     .tokenomics__cap {
-        row-gap: clamp(.25rem ,-.1071588017rem + 1.7857940087vw ,.75rem)
+        row-gap: clamp(.25rem, -.1071588017rem + 1.7857940087vw, .75rem)
     }
 
     .tokenomics__cap>span:nth-child(1) {
-        font-size: clamp(1.5rem ,.2499441939rem + 6.2502790303vw ,3.25rem)
+        font-size: clamp(1.5rem, .2499441939rem + 6.2502790303vw, 3.25rem)
     }
 
     .tokenomics__cap>span:nth-child(2) {
-        font-size: clamp(2.375rem ,.4999162909rem + 9.3754185455vw ,5rem)
+        font-size: clamp(2.375rem, .4999162909rem + 9.3754185455vw, 5rem)
     }
 
     .tokenomics__ca-item {
-        padding-top: clamp(.0625rem ,-.1607242511rem + 1.1161212554vw ,.375rem)
+        padding-top: clamp(.0625rem, -.1607242511rem + 1.1161212554vw, .375rem)
     }
 
     .tokenomics__ca-item {
-        padding-bottom: clamp(.0625rem ,-.1607242511rem + 1.1161212554vw ,.375rem)
+        padding-bottom: clamp(.0625rem, -.1607242511rem + 1.1161212554vw, .375rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) {
-        -webkit-column-gap: clamp(.125rem ,.0357102996rem + .4464485022vw ,.25rem);
-        -moz-column-gap: clamp(.125rem ,.0357102996rem + .4464485022vw ,.25rem);
-        column-gap: clamp(.125rem ,.0357102996rem + .4464485022vw ,.25rem)
+        -webkit-column-gap: clamp(.125rem, .0357102996rem + .4464485022vw, .25rem);
+        -moz-column-gap: clamp(.125rem, .0357102996rem + .4464485022vw, .25rem);
+        column-gap: clamp(.125rem, .0357102996rem + .4464485022vw, .25rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) {
-        margin-right: clamp(.5rem ,.1428411983rem + 1.7857940087vw ,1rem)
+        margin-right: clamp(.5rem, .1428411983rem + 1.7857940087vw, 1rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) svg {
-        width: clamp(1.5rem ,1.0535514978rem + 2.2322425108vw ,2.125rem)
+        width: clamp(1.5rem, 1.0535514978rem + 2.2322425108vw, 2.125rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) svg {
-        height: clamp(1.5rem ,1.0535514978rem + 2.2322425108vw ,2.125rem)
+        height: clamp(1.5rem, 1.0535514978rem + 2.2322425108vw, 2.125rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) span {
-        font-size: clamp(.875rem ,.249972097rem + 3.1251395152vw ,1.75rem)
+        font-size: clamp(.875rem, .249972097rem + 3.1251395152vw, 1.75rem)
     }
 
     .tokenomics__ca-item>div:nth-child(2) {
-        margin-right: clamp(.375rem ,.1071308987rem + 1.3393455065vw ,.75rem)
+        margin-right: clamp(.375rem, .1071308987rem + 1.3393455065vw, .75rem)
     }
 
     .tokenomics__ca-item>div:nth-child(2) {
-        font-size: clamp(.75rem ,.3035514978rem + 2.2322425108vw ,1.375rem)
+        font-size: clamp(.75rem, .3035514978rem + 2.2322425108vw, 1.375rem)
     }
 
     .tokenomics__ca-item>button {
-        width: clamp(1.5rem ,.5178132952rem + 4.9109335238vw ,2.875rem)
+        width: clamp(1.5rem, .5178132952rem + 4.9109335238vw, 2.875rem)
     }
 
     .tokenomics__ca-item>button {
-        height: clamp(1.5rem ,.5178132952rem + 4.9109335238vw ,2.875rem)
+        height: clamp(1.5rem, .5178132952rem + 4.9109335238vw, 2.875rem)
     }
 
     .join__container {
-        padding-bottom: clamp(3.75rem ,2.8571029957rem + 4.4644850217vw ,5rem)
+        padding-bottom: clamp(3.75rem, 2.8571029957rem + 4.4644850217vw, 5rem)
     }
 
     .join__title {
-        margin-bottom: clamp(1.25rem ,.8035514978rem + 2.2322425108vw ,1.875rem)
+        margin-bottom: clamp(1.25rem, .8035514978rem + 2.2322425108vw, 1.875rem)
     }
 
     .join__actions {
-        margin-left: clamp(.625rem ,-.2678970043rem + 4.4644850217vw ,1.875rem)
+        margin-left: clamp(.625rem, -.2678970043rem + 4.4644850217vw, 1.875rem)
     }
 }
 
 @media (max-width: 47.99875em)and (min-width:20em)and (max-width:47.99875em) {
     .hero__image {
-        margin-top:clamp(-13.75rem ,-15.5357940087rem + 8.9289700433vw ,-11.25rem)
+        margin-top: clamp(-13.75rem, -15.5357940087rem + 8.9289700433vw, -11.25rem)
     }
 
     .join {
-        height: clamp(37.5rem ,28.5710299567rem + 44.6448502165vw ,50rem)
+        height: clamp(37.5rem, 28.5710299567rem + 44.6448502165vw, 50rem)
     }
 }
 
 @media (min-width: 20em)and (max-width:160em) {
     .about {
-        margin-top:clamp(-8.125rem ,-.5535714286rem + -4.7321428571vw ,-1.5rem)
+        margin-top: clamp(-8.125rem, -.5535714286rem + -4.7321428571vw, -1.5rem)
     }
 
     .about__top {
-        height: clamp(12.5rem ,11.4285714286rem + 5.3571428571vw ,20rem)
+        height: clamp(12.5rem, 11.4285714286rem + 5.3571428571vw, 20rem)
     }
 
     .about__bottom {
-        height: clamp(12.5rem ,11.4285714286rem + 5.3571428571vw ,20rem)
+        height: clamp(12.5rem, 11.4285714286rem + 5.3571428571vw, 20rem)
     }
 
     .how {
-        margin-top: clamp(-11.125rem ,-.5535714286rem + -6.6071428571vw ,-1.875rem)
+        margin-top: clamp(-11.125rem, -.5535714286rem + -6.6071428571vw, -1.875rem)
     }
 }
 
 @media (min-width: 47.99875em)and (max-width:64.8125em) {
     .tokenomics__ca-item {
-        padding-top:clamp(.375rem ,-.3386829975rem + 1.486878299vw ,.625rem)
+        padding-top: clamp(.375rem, -.3386829975rem + 1.486878299vw, .625rem)
     }
 
     .tokenomics__ca-item {
-        padding-bottom: clamp(.375rem ,-.3386829975rem + 1.486878299vw ,.625rem)
+        padding-bottom: clamp(.375rem, -.3386829975rem + 1.486878299vw, .625rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) {
-        -webkit-column-gap: clamp(.25rem ,-.4636829975rem + 1.486878299vw ,.5rem);
-        -moz-column-gap: clamp(.25rem ,-.4636829975rem + 1.486878299vw ,.5rem);
-        column-gap: clamp(.25rem ,-.4636829975rem + 1.486878299vw ,.5rem)
+        -webkit-column-gap: clamp(.25rem, -.4636829975rem + 1.486878299vw, .5rem);
+        -moz-column-gap: clamp(.25rem, -.4636829975rem + 1.486878299vw, .5rem);
+        column-gap: clamp(.25rem, -.4636829975rem + 1.486878299vw, .5rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) {
-        margin-right: clamp(1rem ,-1.4978904914rem + 5.2040740465vw ,1.875rem)
+        margin-right: clamp(1rem, -1.4978904914rem + 5.2040740465vw, 1.875rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) svg {
-        width: clamp(2.125rem ,1.0544755037rem + 2.2303174485vw ,2.5rem)
+        width: clamp(2.125rem, 1.0544755037rem + 2.2303174485vw, 2.5rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) svg {
-        height: clamp(2.125rem ,1.0544755037rem + 2.2303174485vw ,2.5rem)
+        height: clamp(2.125rem, 1.0544755037rem + 2.2303174485vw, 2.5rem)
     }
 
     .tokenomics__ca-item>div:nth-child(1) span {
-        font-size: clamp(1.75rem ,1.0363170025rem + 1.486878299vw ,2rem)
+        font-size: clamp(1.75rem, 1.0363170025rem + 1.486878299vw, 2rem)
     }
 
     .tokenomics__ca-item>div:nth-child(2) {
-        margin-right: clamp(.75rem ,.0363170025rem + 1.486878299vw ,1rem)
+        margin-right: clamp(.75rem, .0363170025rem + 1.486878299vw, 1rem)
     }
 
     .tokenomics__ca-item>div:nth-child(2) {
-        font-size: clamp(1.375rem ,.6613170025rem + 1.486878299vw ,1.625rem)
+        font-size: clamp(1.375rem, .6613170025rem + 1.486878299vw, 1.625rem)
     }
 
     .tokenomics__ca-item>button {
-        width: clamp(2.875rem ,1.8044755037rem + 2.2303174485vw ,3.25rem)
+        width: clamp(2.875rem, 1.8044755037rem + 2.2303174485vw, 3.25rem)
     }
 
     .tokenomics__ca-item>button {
-        height: clamp(2.875rem ,1.8044755037rem + 2.2303174485vw ,3.25rem)
+        height: clamp(2.875rem, 1.8044755037rem + 2.2303174485vw, 3.25rem)
     }
 }
 
 @media (any-hover: hover) {
     .menu__link:hover {
-        color:#2a2f50
+        color: #2a2f50
     }
 
     .social-item:hover {
         -webkit-transform: translateY(.375rem);
         transform: translateY(.375rem);
-        box-shadow: 0 0 0 0 rgba(0,0,0,.49)
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, .49)
     }
 
     .button:hover {
         -webkit-transform: translateY(.375rem);
         transform: translateY(.375rem);
-        box-shadow: 0 0 0 0 rgba(0,0,0,.49)
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, .49)
     }
 
     .footer__top-menu ul li a:hover {
@@ -3077,6 +3122,7 @@ h1,h2,h3,h4,h5,h6 {
         fill: #2a2f50
     }
 }
+
 .flw-img {
     display: flex;
     align-items: center;
@@ -3084,12 +3130,15 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: space-between;
     padding: 140px 0 40px 0;
 }
+
 .flw-img .box-img {
     width: 24%;
 }
+
 .flw-img .box-img img {
     width: 100%;
 }
+
 .video-play {
     text-align: center;
     padding-bottom: 140px;
