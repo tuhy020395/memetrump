@@ -289,9 +289,9 @@ h1,h2,h3,h4,h5,h6 {
 .header__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     color: #fff;
-    font-size: 24px;
+    font-size: 28px;
     padding-top: 10px;
 }
 
@@ -3082,11 +3082,15 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 140px 0;
+    padding: 140px 0 40px 0;
 }
 .flw-img .box-img {
     width: 24%;
 }
 .flw-img .box-img img {
     width: 100%;
+}
+.video-play {
+    text-align: center;
+    padding-bottom: 140px;
 }
